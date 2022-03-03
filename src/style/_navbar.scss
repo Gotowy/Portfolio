@@ -1,3 +1,49 @@
-header {
-    background: #333;
+nav {
+    display: flex;
+    justify-content: space-between;
+    background: var(--navbar);
+
+    .navBtn {
+        font-size: 1.4em;
+        padding: .5em 2em;
+        cursor: pointer;
+        &:hover {
+            transition: all 0.2s ease-in-out;
+        }
+    }
+
+    .homeBtn {
+        font-family: "Rancho";
+        font-size: 2em;
+        &:hover {
+            color: var(--nav-hover);
+        }
+    }
+
+    .contentBtn {
+        margin: .2em;
+        border-radius: .5em;
+        &:hover {
+            background: var(--nav-hover);
+            color: var(--yellow);
+        }
+    }
+
+    .navmenu {
+        display: flex;
+    }
+}
+
+.background {
+    font-family: "Rancho";
+    text-align: center;
+    .name {
+        font-size: 4em;
+        color: transparent;
+        -webkit-text-stroke: 1px #a70;
+        transition: color 2s cubic-bezier(0.86, -0.04, 0.8, 0.42);
+    }
+    .title {
+        font-size: 2em;
+    }
 }

@@ -1,5 +1,26 @@
+@use 'style/reset';
+@use 'style/variables';
 @use 'style/navbar';
+@import url('https://fonts.googleapis.com/css2?family=Poppins&family=Rancho&display=swap');
 
 body {
-    color: #eee;
+    background: url(img/pw_maze_black.png); /* Background pattern from Toptal Subtle Patterns */
+    font-family: "Poppins";
+    color: var(--white);
+}
+
+.content {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 2em;
+    h2 {
+        margin-bottom: 2em;
+        text-align: center;
+        color: var(--yellow);
+    }
+}
+
+.color {
+    color: var(--yellow) !important;
 }

@@ -1,5 +1,5 @@
 import './main.scss';
-import {addNavbar} from './ts/navbar';
+import { addNavbar, addNameColor} from './ts/navbar';
 
-console.log('kluski z rosołem');
 addNavbar();
+addNameColor();

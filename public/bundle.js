@@ -16,7 +16,7 @@
   \****************************************************************************************************/
 /***/ ((module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var _node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../node_modules/css-loader/dist/runtime/noSourceMaps.js */ \"./node_modules/css-loader/dist/runtime/noSourceMaps.js\");\n/* harmony import */ var _node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../node_modules/css-loader/dist/runtime/api.js */ \"./node_modules/css-loader/dist/runtime/api.js\");\n/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__);\n// Imports\n\n\nvar ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));\n// Module\n___CSS_LOADER_EXPORT___.push([module.id, \"body {\\n  color: red;\\n}\", \"\"]);\n// Exports\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);\n\n\n//# sourceURL=webpack://portfolio/./src/main.scss?./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var _node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../node_modules/css-loader/dist/runtime/noSourceMaps.js */ \"./node_modules/css-loader/dist/runtime/noSourceMaps.js\");\n/* harmony import */ var _node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../node_modules/css-loader/dist/runtime/api.js */ \"./node_modules/css-loader/dist/runtime/api.js\");\n/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__);\n// Imports\n\n\nvar ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));\n// Module\n___CSS_LOADER_EXPORT___.push([module.id, \"* {\\n  margin: 0;\\n  padding: 0;\\n  box-sizing: border-box;\\n}\\n\\nul {\\n  list-style-type: none;\\n}\\n\\na {\\n  text-decoration: none;\\n  color: inherit;\\n}\\n\\n:root {\\n  --navbar: #7779;\\n  --nav-hover: #222b;\\n  --white: #eee;\\n  --yellow: #fd5;\\n}\\n\\nheader {\\n  background: var(--navbar);\\n}\\nheader nav {\\n  display: flex;\\n  justify-content: space-between;\\n}\\nheader nav .navBtn {\\n  font-size: 1.4em;\\n  padding: 0.5em 2em;\\n  cursor: pointer;\\n}\\nheader nav .navBtn:hover {\\n  transition: all 0.2s ease-in-out;\\n}\\nheader nav .homeBtn {\\n  font-family: \\\"Rancho\\\", \\\"Arial\\\";\\n}\\nheader nav .homeBtn:hover {\\n  color: var(--nav-hover);\\n}\\nheader nav .contentBtn {\\n  margin: 0.2em;\\n  border-radius: 0.5em;\\n}\\nheader nav .contentBtn:hover {\\n  background: var(--nav-hover);\\n  color: var(--yellow);\\n}\\nheader nav ul.navmenu {\\n  display: flex;\\n}\\n\\nbody {\\n  background: #000;\\n  font-family: \\\"Poppins\\\", \\\"Arial\\\";\\n  color: var(--white);\\n}\", \"\"]);\n// Exports\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);\n\n\n//# sourceURL=webpack://portfolio/./src/main.scss?./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js");
 
 /***/ }),
 
@@ -37,6 +37,16 @@ eval("\n\n/*\n  MIT License http://www.opensource.org/licenses/mit-license.php\n
 /***/ ((module) => {
 
 eval("\n\nmodule.exports = function (i) {\n  return i[1];\n};\n\n//# sourceURL=webpack://portfolio/./node_modules/css-loader/dist/runtime/noSourceMaps.js?");
+
+/***/ }),
+
+/***/ "./src/html/navbar.html":
+/*!******************************!*\
+  !*** ./src/html/navbar.html ***!
+  \******************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n// Module\nvar code = \"<header>\\r\\n    <nav>\\r\\n        <div class=\\\"navBtn homeBtn\\\" onclick=\\\"url('body')\\\">Adam Rybak - Portfolio</div>\\r\\n        <ul class=\\\"navmenu\\\">\\r\\n            <li class=\\\"navBtn contentBtn\\\" onclick='showContent()'>About&nbsp;me</li>\\r\\n            <li class=\\\"navBtn contentBtn\\\" onclick=\\\"url('#projects')\\\">Projects</li>\\r\\n            <li class=\\\"navBtn contentBtn\\\" onclick=\\\"url('#contact')\\\">Contact</li>\\r\\n        </ul>\\r\\n    </nav>\\r\\n    <section class=\\\"background\\\">\\r\\n      <div class=\\\"title1\\\">Adam Rybak</div>\\r\\n      <span class=\\\"title2\\\">PORTFOLIO FRONT-END DEVELOPERA</span>\\r\\n    </section>\\r\\n</header>\";\n// Exports\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (code);\n\n//# sourceURL=webpack://portfolio/./src/html/navbar.html?");
 
 /***/ }),
 
@@ -116,7 +126,7 @@ eval("\n\n/* istanbul ignore next  */\nfunction styleTagTransform(css, styleElem
   \**********************/
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
-eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\n__webpack_require__(/*! ./main.scss */ \"./src/main.scss\");\r\n__webpack_require__(/*! ./ts/navbar */ \"./src/ts/navbar.ts\");\r\nconsole.log('kluski z rosołem');\r\n\n\n//# sourceURL=webpack://portfolio/./src/index.ts?");
+eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\n__webpack_require__(/*! ./main.scss */ \"./src/main.scss\");\r\nconst navbar_1 = __webpack_require__(/*! ./ts/navbar */ \"./src/ts/navbar.ts\");\r\nconst showContent = () => {\r\n    const projectDetails = document.querySelector('.navbar');\r\n    projectDetails.innerHTML = \"abcaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\";\r\n};\r\nconsole.log('kluski z rosołem');\r\n(0, navbar_1.addNavbar)();\r\n\n\n//# sourceURL=webpack://portfolio/./src/index.ts?");
 
 /***/ }),
 
@@ -124,9 +134,9 @@ eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\n
 /*!**************************!*\
   !*** ./src/ts/navbar.ts ***!
   \**************************/
-/***/ (() => {
+/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
-eval("\r\nconst lol = Object(function webpackMissingModule() { var e = new Error(\"Cannot find module './navbar.html'\"); e.code = 'MODULE_NOT_FOUND'; throw e; }());\r\nconsole.log('no hejka');\r\nconsole.log(lol);\r\n// const projectDetails = document.querySelector('project-details')!;\r\n// console.log(projectDetails);\r\n// projectDetails.innerHTML = lol;\r\n\n\n//# sourceURL=webpack://portfolio/./src/ts/navbar.ts?");
+eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\nexports.addNavbar = void 0;\r\nconst addNavbar = () => {\r\n    const navbar = (__webpack_require__(/*! ../html/navbar.html */ \"./src/html/navbar.html\")[\"default\"]);\r\n    const projectDetails = document.querySelector('.navbar');\r\n    projectDetails.innerHTML = navbar;\r\n    console.log('tu navbar, odbiór');\r\n};\r\nexports.addNavbar = addNavbar;\r\n\n\n//# sourceURL=webpack://portfolio/./src/ts/navbar.ts?");
 
 /***/ })
 
