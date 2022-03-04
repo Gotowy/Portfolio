@@ -1,26 +1,51 @@
 @use 'style/reset';
 @use 'style/variables';
 @use 'style/navbar';
+@use 'style/footer';
 @import url('https://fonts.googleapis.com/css2?family=Poppins&family=Rancho&display=swap');
 
 body {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
     background: url(img/pw_maze_black.png); /* Background pattern from Toptal Subtle Patterns */
     font-family: "Poppins";
     color: var(--white);
+
+    a {
+        color: var(--yellow);
+        text-decoration: underline;
+        
+        &:hover {
+          color: var(--bright-yellow);
+        }
+      }
 }
 
-.content {
+main {
     max-width: 1200px;
+    height: 100%;
     margin-left: auto;
     margin-right: auto;
     padding: 2em;
+    
     h2 {
-        margin-bottom: 2em;
+        margin-bottom: 1em;
+        font-size: 2.5em;
         text-align: center;
         color: var(--yellow);
+        transition: all 0.5s ease-out;
     }
 }
 
 .color {
     color: var(--yellow) !important;
+}
+
+.active {
+    background: var(--nav-hover);
+    color: var(--bright-yellow);
+    text-decoration: none !important;
+    cursor: default !important;
+    user-select: none;
 }

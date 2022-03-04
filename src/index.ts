@@ -1,5 +1,7 @@
 import './main.scss';
-import { addNavbar, addNameColor} from './ts/navbar';
+import { injectHtmlTemplate } from './ts/services';
+import { addNavbar } from './ts/navbar';
 
 addNavbar();
-addNameColor();
+injectHtmlTemplate('about.html', 'main');
+injectHtmlTemplate('footer.html', 'footer');
