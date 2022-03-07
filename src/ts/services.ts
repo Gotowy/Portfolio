@@ -4,6 +4,13 @@ export const injectHtmlTemplate = (templateFileName: `${string}.html`, cssSelect
     if (container && template) container.innerHTML = template;
 }
 
+export const listenerCallback = (item: Element, selector: string, container: string) => {
+    const value = item.getAttribute('value');
+    injectHtmlTemplate(`${value}.html`, container);
+    removeClass('active', `${selector}[class*="active"]`);
+    addClass('active', `${selector}[value="${value}"]`);
+}
+
 export const addClass = (className: string, cssSelector: string): void => {
     const element: HTMLElement = document.querySelector(cssSelector) as HTMLElement;
     setTimeout(() => element?.classList.add(className), 0);

@@ -2,8 +2,9 @@
 @use 'style/variables';
 @use 'style/animations';
 @use 'style/navbar';
+@use 'style/projects';
 @use 'style/footer';
-@import url('https://fonts.googleapis.com/css2?family=Poppins&family=Rancho&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins&family=Rancho&family=Fredericka+the+Great&family=Amarante&display=swap');
 
 body {
   display: flex;
@@ -12,21 +13,15 @@ body {
   font-family: "Poppins";
   color: var(--white);
 
-  a {
-      color: var(--yellow);
-      text-decoration: underline;
-      
-      &:hover {
-        color: var(--bright-yellow);
-      }
-    }
-
   main {
-    max-width: 1200px;
     min-height: calc(100vh - 200px);
+    min-width: 80%;
+    max-width: 1200px;
+    position: relative;
     margin-left: auto;
     margin-right: auto;
     padding: 7em 2em;
+    // background: #fff5;
     
     h2 {
         margin-bottom: 1em;

@@ -1,10 +1,9 @@
-import { injectHtmlTemplate, addClass, removeClass, scroll } from './services';
+import { injectHtmlTemplate, addClass, removeClass, scroll,  listenerCallback } from './services';
 
 export const addNavbar = (): void => {
     injectHtmlTemplate('navbar.html', '.navbar');
+    
     const homeButton: HTMLDivElement = document.querySelector('.home-btn') as HTMLDivElement;
-    const contentButtons: NodeListOf<HTMLLIElement> = document.querySelectorAll('.content-btn');
-
     homeButton?.addEventListener('click', () => {    
         removeClass('yellow', '.name');
         addClass('yellow', '.name');
@@ -19,13 +18,17 @@ export const addNavbar = (): void => {
         scroll('.bg');
     })
 
+    const contentButtons: NodeListOf<HTMLLIElement> = document.querySelectorAll('.content-btn');
     contentButtons?.forEach((item: Element): void => {
-        const value = item.getAttribute('value');
         item.addEventListener('click', () => {
-            injectHtmlTemplate(`${value}.html`, 'main');
-            removeClass('active', '.content-btn[class*="active"]');
-            addClass('active', `.content-btn[value="${value}"]`);
+            listenerCallback(item, '.content-btn', 'main');
             scroll('main');
+            if (item.getAttribute('value') === "projects") {
+                const projects: NodeListOf<HTMLLIElement> = document.querySelectorAll('.project') as NodeListOf<HTMLLIElement>;
+                projects?.forEach((project: Element): void => {
+                    project.addEventListener('click', () => listenerCallback(project, '.project', '.project-details'));
+                })
+            } 
         });
     });
 }

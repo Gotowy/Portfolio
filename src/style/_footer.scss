@@ -7,4 +7,13 @@ footer {
   text-align: center;
   color: var(--white);
   background: linear-gradient(transparent, var(--footer));
+
+  a {
+    color: var(--yellow);
+    text-decoration: underline;
+    
+    &:hover {
+      color: var(--bright-yellow);
+    }
+  }
 }
