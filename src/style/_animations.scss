@@ -1,0 +1,35 @@
+@keyframes header {
+    from {
+        transform: translateY(-15px);
+    }
+    to {
+        transform: none;
+    }
+}
+
+@keyframes opacity {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes color {
+    from {
+        color: transparent;
+    }
+    to {
+        color: var(--yellow);
+    }
+}
+
+@keyframes shade {
+    from {
+        background-color: #111;
+    }
+    to {
+        background-color: #000;
+    }
+}

@@ -1,48 +1,85 @@
 nav {
     display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
     justify-content: space-between;
     background: var(--navbar);
 
-    .navBtn {
+    .nav-btn {
         font-size: 1.4em;
         padding: .5em 2em;
         cursor: pointer;
+        
         &:hover {
             transition: all 0.2s ease-in-out;
         }
     }
 
-    .homeBtn {
+    .home-btn {
         font-family: "Rancho";
         font-size: 2em;
+        
         &:hover {
             color: var(--nav-hover);
         }
     }
 
-    .contentBtn {
-        margin: .2em;
-        border-radius: .5em;
-        &:hover {
-            color: var(--bright-yellow);
-        }
-    }
-
     .navmenu {
         display: flex;
+        align-items: center;
+    
+        .content-btn {
+            height: max-content;
+            margin: .2em;
+            border-radius: .5em;
+            user-select: none;
+            
+            &:hover {
+                color: var(--bright-yellow);
+                text-decoration: underline;
+            }
+        }
+    
+        .active {
+            background: var(--nav-hover);
+            color: var(--bright-yellow);
+            text-decoration: none !important;
+            cursor: default !important;
+            pointer-events: none;
+        }
     }
 }
 
-.background {
+.bg {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     font-family: "Rancho";
-    text-align: center;
+    background: #000;
+    
     .name {
         font-size: 4em;
-        color: transparent;
+        color: var(--yellow);
         -webkit-text-stroke: 1px #a70;
-        transition: color 2s cubic-bezier(0.86, -0.04, 0.8, 0.42);
     }
+
     .title {
         font-size: 2em;
     }
+
+    .yellow {
+        animation: color 2s cubic-bezier(0.86, -0.04, 0.8, 0.42), opacity .5s;
+    }
+
+    .visible {
+        animation: opacity 2s cubic-bezier(1, -0.02, 0.6, -0.01);
+    }
+}
+
+.shade {
+    animation: shade 2s ease-out;
 }
