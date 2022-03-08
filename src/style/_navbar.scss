@@ -60,7 +60,10 @@ nav {
     justify-content: center;
     align-items: center;
     font-family: "Rancho";
-    background: #000;
+    // background: url(../img/bg.jpg); /*Photo by Samuel Bourke on Unsplash*/
+    // background-size: cover;
+    background-color: var(--black);
+    // background-blend-mode: overlay;
     
     .name {
         font-size: 4em;

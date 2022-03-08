@@ -1,0 +1,85 @@
+.project-details {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background: #fff1;
+    border: solid var(--white) 1px;
+    border-left: 0;
+    border-radius: 0 20px 20px 0;
+    padding: 2em;
+    overflow: auto;
+
+    h3 {
+        margin-bottom: 1em;
+        text-align: center;
+        font-size: 1.7em;
+        border-bottom: solid var(--white) 2px;
+      }
+    
+    .project-container {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin-top: auto;
+        margin-bottom: auto;
+
+        .project-preview {
+            min-width: 47%;
+            margin: 0 2em 2em 0;
+
+            img {
+                max-width: 100%;
+                border-radius: 3px;
+            }
+
+            .btn {
+                border-radius: 10px;
+                text-align: center;
+                cursor: pointer;
+                padding: 10px;
+                margin: 10px 0;
+                font-size: 18px;
+            }
+
+            .filled-btn {
+                background: var(--yellow);
+                color: var(--black);
+
+                &:hover {
+                    background: var(--bright-yellow);
+                }
+            }
+
+            .outlined-btn {
+                color: var(--yellow);
+                border: 2px var(--yellow) solid;
+
+                &:hover {
+                    color: var(--bright-yellow);
+                    border-color: var(--bright-yellow);
+                    background: var(--transparent-grey);
+                }
+            }                  
+        }
+
+        .project-desc {
+            min-width: 45%;
+            text-align: justify;
+
+            ul {
+                list-style-type: circle;
+                margin-left: 1em;
+                margin-top: .5em;
+
+                a {
+                    text-decoration:underline;
+                    color: var(--yellow);
+
+                    &:hover {
+                        color: var(--bright-yellow);
+                    }
+                }
+            }
+        }
+    } 
+}

@@ -1,0 +1,113 @@
+.projects-list {
+    // min-height: 100%;
+    // display: flex;
+    // flex-direction: column;
+    // justify-content: space-between;
+
+    .project {
+        height: 25%;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 1px;
+        padding: 2em;
+        border: solid 1px var(--white);
+        border-radius: 20px 0 0 20px;
+        width: 400px;
+        user-select: none;
+
+        .title {
+            font-size: 2em;
+            cursor: pointer;
+            transform: translateY(15px);
+            transition: transform 0.5s ease-out;
+
+            span {
+                transition: color .5s ease-out;
+            }
+        }
+
+        p {
+            font-size: .7em;
+            text-align: center;
+            color: var(--light-grey) !important;
+            opacity: 0;
+            transition: opacity 0.5s ease-out;
+        }
+
+        &:hover, .active {
+            .title {
+                transform: translateY(0);
+            }
+
+            p {
+                display: block;
+                opacity: 1;
+            }
+        }
+
+        &:first-child {
+            margin-top: 0;
+        }
+
+
+        &:last-child {
+            height: calc(25% - 3px);
+        }
+    }
+
+    .portfolio .title {
+        font-family: "Rancho";
+        font-size: 3em;
+    }
+
+    .raffaele .title {
+        font-family: "Amarante";
+    }
+
+    .netfilmoteka .title {
+            font-family: "Fredericka the Great";
+    }
+    
+    .active {
+        border-left: none;
+        border-right: none;
+        background: linear-gradient(.25turn, transparent, var(--transparent-grey));
+        cursor: default !important;
+        pointer-events: none;
+
+        &:first-child, &:nth-child(2) {
+            border-bottom: none;
+        }
+
+        &:last-child, &:nth-child(3) {
+            border-top: none;
+        }
+        
+        .title {
+            transform: translateY(0);
+        }
+
+        p {
+            opacity: 1;
+        }
+
+        .white {
+            color: var(--white);
+        }
+
+        .yellow {
+            color: var(--yellow);
+        }
+
+        .green {
+            color: var(--green);
+        }
+
+        .red {
+            color: var(--red);
+        }
+    }
+}

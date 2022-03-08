@@ -27,9 +27,9 @@
 
 @keyframes shade {
     from {
-        background-color: #111;
+        background-color: var(--lighter-black);
     }
     to {
-        background-color: #000;
+        background-color: var(--black);
     }
 }
