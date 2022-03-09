@@ -33,3 +33,33 @@
         background-color: var(--black);
     }
 }
+
+@keyframes arrival-right {
+    from {
+        transform: translateX(200px);
+        opacity: 0;
+    }
+    60% {
+        transform: translateX(200px);
+        opacity: 0;
+    }
+    to {
+        transform: none;
+        opacity: 1;
+    }
+}
+
+@keyframes arrival-left {
+    from {
+        transform: translateX(-200px);
+        opacity: 0;
+    }
+    60% {
+        transform: translateX(-200px);
+        opacity: 0;
+    }
+    to {
+        transform: none;
+        opacity: 1;
+    }
+}

@@ -28,6 +28,7 @@ export const addNavbar = (): void => {
                 projects?.forEach((project: Element): void => {
                     project.addEventListener('click', () => listenerCallback(project, '.project', '.project-details'));
                 })
+                injectHtmlTemplate('projects/portfolio.html', '.project-details');
             } 
         });
     });

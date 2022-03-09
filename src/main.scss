@@ -4,6 +4,7 @@
 @use 'style/navbar';
 @use 'style/about';
 @use 'style/projects';
+@use 'style/contact';
 @use 'style/footer';
 @import url('https://fonts.googleapis.com/css2?family=Poppins&family=Rancho&family=Fredericka+the+Great&family=Amarante&display=swap');
 
@@ -16,24 +17,25 @@ body {
 
   main {
     min-height: calc(100vh - 200px);
+    height: 100%;
     min-width: 80%;
     max-width: 1200px;
     position: relative;
     margin-left: auto;
     margin-right: auto;
-    padding: 7em 2em;
-    // background: #fff5;
+    padding: 7em 2em 2em 2em;
     
     h2 {
         margin-bottom: 1em;
         font-size: 2.5em;
         text-align: center;
         color: var(--yellow);
-        animation: header 0.5s ease-out;
+        cursor: default;
+        animation: header .5s ease-out;
     }
 
     section {
-      animation: opacity 0.5s ease-out;
+      animation: opacity .5s ease-out;
     }
   }
 }

@@ -2,10 +2,27 @@
 @use 'project-details';
 
 .projects {
+    h3 {
+        position: relative;
+
+        span {
+            position: absolute;
+            right: 0;
+            font-size: .7em;
+            color: var(--grey);
+            pointer-events: none;
+        }
+    }
 
     .projects-container {
         display: flex;
         justify-content: flex-start;
         height: 70vh;
+
+        .outlined-btn {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
     }
 }
