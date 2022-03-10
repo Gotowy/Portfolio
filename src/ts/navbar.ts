@@ -26,7 +26,10 @@ export const addNavbar = (): void => {
             if (item.getAttribute('value') === "projects") {
                 const projects: NodeListOf<HTMLLIElement> = document.querySelectorAll('.project') as NodeListOf<HTMLLIElement>;
                 projects?.forEach((project: Element): void => {
-                    project.addEventListener('click', () => listenerCallback(project, '.project', '.project-details'));
+                    project.addEventListener('click', () => {
+                        listenerCallback(project, '.project', '.project-details');
+                        scroll('.projects h2');    
+                    });
                 })
                 injectHtmlTemplate('projects/portfolio.html', '.project-details');
             } 
