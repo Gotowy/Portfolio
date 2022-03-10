@@ -25,7 +25,7 @@ export class Icon {
 }
 
 export const createIconList = (iconList: {name: string, description: string}[], Icon: any): void => { 
-    const lol = iconList.reduce((list, icon) => { return list + new Icon(icon.name, icon.description).returnElement();}, '');
+    const icons = iconList.reduce((list, icon) => { return list + new Icon(icon.name, icon.description).returnElement();}, '');
     const container: HTMLElement = document.querySelector('.technologies ul') as HTMLElement;
-    container.innerHTML = lol;
+    container.innerHTML = icons;
 }
