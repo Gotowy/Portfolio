@@ -1,4 +1,6 @@
 import { injectHtmlTemplate, addClass, removeClass, scroll,  listenerCallback } from './services';
+import { Icon, createIconList } from './about'
+const iconList = require("../json/icons.json");
 
 export const addNavbar = (): void => {
     injectHtmlTemplate('navbar.html', '.navbar');
@@ -18,6 +20,9 @@ export const addNavbar = (): void => {
         scroll('.bg');
     })
 
+    const hamburger: HTMLSpanElement = document.querySelector('.hamburger') as HTMLSpanElement;
+    hamburger?.addEventListener('click', () => { addClass('displayed', '.content-btn'); });
+
     const contentButtons: NodeListOf<HTMLLIElement> = document.querySelectorAll('.content-btn');
     contentButtons?.forEach((item: Element): void => {
         item.addEventListener('click', () => {
@@ -32,7 +37,8 @@ export const addNavbar = (): void => {
                     });
                 })
                 injectHtmlTemplate('projects/portfolio.html', '.project-details');
-            } 
+            }
+            if (item.getAttribute('value') === "about") createIconList(iconList, Icon); 
         });
     });
 }

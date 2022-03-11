@@ -1,7 +1,8 @@
 import './main.scss';
 import { injectHtmlTemplate } from './ts/services';
 import { addNavbar } from './ts/navbar';
-import { Icon, iconList, createIconList } from './ts/about';
+import { Icon, createIconList } from './ts/about';
+const iconList = require("./json/icons.json");
 
 addNavbar();
 injectHtmlTemplate('about.html', 'main');
