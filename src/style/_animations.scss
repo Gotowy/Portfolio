@@ -1,38 +1,52 @@
-@keyframes header {
-    from {
-        transform: translateY(-15px);
+@mixin animation($name, $prop, $value) {
+    @if $prop == TX {
+        @keyframes #{$name} {
+            from {
+                transform: translateX($value);
+            }
+            to {
+                transform: none;
+            }
+        }
     }
-    to {
-        transform: none;
+
+    @else if $prop == TY {
+        @keyframes #{$name} {
+            from {
+                transform: translateY($value);
+            }
+            to {
+                transform: none;
+            }
+        }
+    }
+
+    @else if $prop == O {
+        @keyframes #{$name} {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: $value;
+            }
+        }
+    }
+
+    @else if $prop == C {
+        @keyframes #{$name} {
+            from {
+                color: transparent;
+            }
+            to {
+                color: $value;
+            }
+        }
     }
 }
 
-@keyframes opacity {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
-}
-
-@keyframes color {
-    from {
-        color: transparent;
-    }
-    to {
-        color: var(--yellow);
-    }
-}
-
-@keyframes shade {
-    from {
-        background-color: var(--lighter-black);
-    }
-    to {
-        background-color: var(--black);
-    }
-}
+@include animation(header, TY, -15px);
+@include animation(opacity, O, 1);
+@include animation(color, C, var(--yellow));
 
 @keyframes arrival-right {
     from {

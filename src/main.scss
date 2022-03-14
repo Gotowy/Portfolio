@@ -2,6 +2,7 @@
 @use 'style/variables';
 @use 'style/animations';
 @use 'style/navbar';
+@use 'style/home';
 @use 'style/about';
 @use 'style/projects';
 @use 'style/contact';
@@ -32,8 +33,8 @@ body {
         animation: header .5s ease-out;
     }
 
-    section {
-      animation: opacity .5s ease-out;
+    &>section {
+      animation: opacity .3s ease-out;
     }
   }
 }

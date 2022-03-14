@@ -33,6 +33,7 @@
         flex-wrap: wrap;
         margin-top: auto;
         margin-bottom: auto;
+        animation: opacity .3s ease-out;
 
         .project-preview {
             min-width: 47%;
@@ -54,7 +55,7 @@
 
             .filled-btn {
                 background: var(--yellow);
-                color: var(--black);
+                color: var(--transparent-black);
 
                 &:hover {
                     background: var(--bright-yellow);
@@ -83,7 +84,7 @@
                 margin-top: .5em;
 
                 a {
-                    text-decoration:underline;
+                    text-decoration: underline;
                     color: var(--yellow);
 
                     &:hover {

@@ -12,7 +12,7 @@ nav {
     background: var(--navbar);
 
     @media (max-width: variables.$breakpoint-medium) {
-        background: var(--dark-grey);
+        background: var(--nav-hover);
     }
 
     .nav-btn {
@@ -21,6 +21,7 @@ nav {
         cursor: pointer;
         
         &:hover {
+            color: var(--bright-yellow);
             transition: all 0.2s ease-in-out;
         }
     }
@@ -28,10 +29,6 @@ nav {
     .home-btn {
         font-family: "Rancho";
         font-size: 2em;
-        
-        &:hover {
-            color: var(--nav-hover);
-        }
     }
 
     .navmenu {
@@ -42,25 +39,20 @@ nav {
             width: 100%;
             flex-direction: column;
             position: absolute;
-            right: 0;
             top: 100%;
-            background: var(--dark-grey);
+            background: var(--nav-hover);
+            transform: translateX(-100%);
+            transition: transform .5s;
+            border-end-end-radius: 1em;
         }
     
         .content-btn {
-            height: max-content;
+            // height: max-content;
             margin: .2em;
             border-radius: .5em;
             user-select: none;
-
-            @media (max-width: variables.$breakpoint-medium) {
-                width: 99%;
-                text-align: center;
-                display: none;
-            }
             
             &:hover {
-                color: var(--bright-yellow);
                 text-decoration: underline;
             }
         }
@@ -68,61 +60,54 @@ nav {
         .active {
             background: var(--nav-hover);
             color: var(--bright-yellow);
-            text-decoration: none !important;
-            cursor: default !important;
+            text-decoration: none;
+            cursor: default;
             pointer-events: none;
+
+            @media (max-width: variables.$breakpoint-medium) {
+                font-weight: bold;
+                background: none;
+            }
         }
     }
 
     .hamburger {
+        z-index: 2;
         font-size: 3em;
         margin-right: .3em;
         cursor: pointer;
+        padding: 0;
         display: none;
         max-width: 1em;
+
+        &:active {
+            color: var(--bright-yellow);
+            background: var(--transparent-grey);
+            border-radius: 25%;
+        }
 
         @media (max-width: variables.$breakpoint-medium) {
             width: 99%;
             display: block;
         }
-    }
 
-    .displayed {
-        display: block !important;
-    }
-}
-
-.bg {
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    font-family: "Rancho";
-    // background: url(../img/bg.jpg); /*Photo by Samuel Bourke on Unsplash*/
-    // background-size: cover;
-    background-color: var(--black);
-    // background-blend-mode: overlay;
-    
-    .name {
-        font-size: 4em;
-        color: var(--yellow);
-        -webkit-text-stroke: 1px #a70;
-    }
-
-    .title {
-        font-size: 2em;
-    }
-
-    .yellow {
-        animation: color 2s cubic-bezier(0.86, -0.04, 0.8, 0.42), opacity .5s;
-    }
-
-    .visible {
-        animation: opacity 2s cubic-bezier(1, -0.02, 0.6, -0.01);
+        .iconify {
+            display: flex;
+            align-items: center;
+        }
     }
 }
 
-.shade {
-    animation: shade 2s ease-out;
+.blocker {
+    @media (max-width: variables.$breakpoint-medium) {
+        height: 100vh;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: 1;
+        background: var(--transparent-white);
+        transform: translateX(-100%);
+        transition: transform .5s;
+    }
 }

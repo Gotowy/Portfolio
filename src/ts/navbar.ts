@@ -1,5 +1,5 @@
 import { injectHtmlTemplate, addClass, removeClass, scroll,  listenerCallback } from './services';
-import { Icon, createIconList } from './about'
+import { createIconList } from './about'
 const iconList = require("../json/icons.json");
 
 export const addNavbar = (): void => {
@@ -17,16 +17,30 @@ export const addNavbar = (): void => {
         addClass('shade', '.bg');
 
         removeClass('active', '.content-btn[class*="active"]');
+        removeClass('displayed', '.navmenu');
+        removeClass('displayed', '.blocker');
         scroll('.bg');
     })
 
+    const blocker: HTMLSpanElement = document.querySelector('.blocker') as HTMLSpanElement;
+    blocker?.addEventListener('click', () => {
+        removeClass('displayed', '.navmenu');
+        removeClass('displayed', '.blocker');
+    });
+
     const hamburger: HTMLSpanElement = document.querySelector('.hamburger') as HTMLSpanElement;
-    hamburger?.addEventListener('click', () => { addClass('displayed', '.content-btn'); });
+    hamburger?.addEventListener('click', () => {
+        const navmenu: HTMLUListElement = document.querySelector('.navmenu') as HTMLUListElement;
+        navmenu?.classList.toggle('displayed');
+        blocker?.classList.toggle('displayed');
+    });
 
     const contentButtons: NodeListOf<HTMLLIElement> = document.querySelectorAll('.content-btn');
     contentButtons?.forEach((item: Element): void => {
         item.addEventListener('click', () => {
             listenerCallback(item, '.content-btn', 'main');
+            removeClass('displayed', '.navmenu');
+            removeClass('displayed', '.blocker');
             scroll('main');
             if (item.getAttribute('value') === "projects") {
                 const projects: NodeListOf<HTMLLIElement> = document.querySelectorAll('.project') as NodeListOf<HTMLLIElement>;
@@ -38,7 +52,7 @@ export const addNavbar = (): void => {
                 })
                 injectHtmlTemplate('projects/portfolio.html', '.project-details');
             }
-            if (item.getAttribute('value') === "about") createIconList(iconList, Icon); 
+            if (item.getAttribute('value') === "about") createIconList(iconList); 
         });
     });
 }

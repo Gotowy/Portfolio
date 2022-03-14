@@ -1,0 +1,39 @@
+@use 'variables';
+
+.bg {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: "Rancho";
+    text-align: center;
+    background-image: url(./img/bg.jpg); /*Photo by Samuel Bourke on Unsplash*/
+    background-size: cover;
+    background-color: var(--transparent-black);
+    background-blend-mode: overlay;
+    
+    .name {
+        font-size: 4em;
+        color: var(--yellow);
+        -webkit-text-stroke: 1px #a70;
+    }
+
+    .title {
+        font-size: 2em;
+    }
+
+    .yellow {
+        animation: color 2s cubic-bezier(0.86, -0.04, 0.8, 0.42), opacity .5s;
+    }
+
+    .visible {
+        animation: opacity 2s cubic-bezier(1, -0.02, 0.6, -0.01);
+    }
+}
+
+.displayed {
+    @media (max-width: variables.$breakpoint-medium) {
+        transform: translateX(0) !important;
+    }
+}
